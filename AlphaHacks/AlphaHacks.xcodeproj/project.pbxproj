@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		780FF8E82675525200EA2B39 /* LoadingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780FF8E72675525200EA2B39 /* LoadingPage.swift */; };
 		783566FB26745DF4008F9DA7 /* AlphaHacksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783566FA26745DF4008F9DA7 /* AlphaHacksApp.swift */; };
 		783566FD26745DF4008F9DA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783566FC26745DF4008F9DA7 /* ContentView.swift */; };
 		783566FF26745DF6008F9DA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783566FE26745DF6008F9DA7 /* Assets.xcassets */; };
 		7835670226745DF6008F9DA7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7835670126745DF6008F9DA7 /* Preview Assets.xcassets */; };
 		78D4E62226751A6B00AC1E4E /* CameraBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4E62126751A6B00AC1E4E /* CameraBase.swift */; };
+		78D4E6242675240200AC1E4E /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4E6232675240200AC1E4E /* AppState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		780FF8E72675525200EA2B39 /* LoadingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPage.swift; sourceTree = "<group>"; };
 		783566F726745DF4008F9DA7 /* AlphaHacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlphaHacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		783566FA26745DF4008F9DA7 /* AlphaHacksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaHacksApp.swift; sourceTree = "<group>"; };
 		783566FC26745DF4008F9DA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		7835670126745DF6008F9DA7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7835670326745DF6008F9DA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78D4E62126751A6B00AC1E4E /* CameraBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraBase.swift; sourceTree = "<group>"; };
+		78D4E6232675240200AC1E4E /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				7835670326745DF6008F9DA7 /* Info.plist */,
 				7835670026745DF6008F9DA7 /* Preview Content */,
 				78D4E62126751A6B00AC1E4E /* CameraBase.swift */,
+				78D4E6232675240200AC1E4E /* AppState.swift */,
+				780FF8E72675525200EA2B39 /* LoadingPage.swift */,
 			);
 			path = AlphaHacks;
 			sourceTree = "<group>";
@@ -143,6 +149,8 @@
 			files = (
 				78D4E62226751A6B00AC1E4E /* CameraBase.swift in Sources */,
 				783566FD26745DF4008F9DA7 /* ContentView.swift in Sources */,
+				780FF8E82675525200EA2B39 /* LoadingPage.swift in Sources */,
+				78D4E6242675240200AC1E4E /* AppState.swift in Sources */,
 				783566FB26745DF4008F9DA7 /* AlphaHacksApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

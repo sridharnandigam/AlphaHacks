@@ -11,6 +11,7 @@ import AVFoundation
 struct CustomCameraPhotoView: View {
     @State private var image: Image?
     @State private var showingCustomCamera = false
+    @State private var didTapCapture = false
     @State private var inputImage: UIImage?
     
     var body: some View {
@@ -36,7 +37,7 @@ struct CustomCameraPhotoView: View {
                 }
             }
             .sheet(isPresented: $showingCustomCamera, onDismiss: loadImage) {
-                CustomCameraView(image: self.$inputImage)
+                CustomCameraView(image: self.$inputImage, didTapCapture: $didTapCapture)
             }
             .edgesIgnoringSafeArea(.all)
             
@@ -53,7 +54,7 @@ struct CustomCameraPhotoView: View {
 struct CustomCameraView: View {
     
     @Binding var image: UIImage?
-    @State var didTapCapture: Bool = false
+    @Binding var didTapCapture: Bool
     var body: some View {
         ZStack(alignment: .bottom) {
             
@@ -196,14 +197,14 @@ class CustomCameraController: UIViewController {
 struct CaptureButtonView: View {
     @State private var animationAmount: CGFloat = 1
     var body: some View {
-        Image(systemName: "video").font(.largeTitle)
+        Image(systemName: "camera").font(.largeTitle)
             .padding(30)
-            .background(Color.red)
+            .background(Color.green)
             .foregroundColor(.white)
             .clipShape(Circle())
             .overlay(
                 Circle()
-                    .stroke(Color.red)
+                    .stroke(Color.green)
                     .scaleEffect(animationAmount)
                     .opacity(Double(2 - animationAmount))
                     .animation(Animation.easeOut(duration: 1)

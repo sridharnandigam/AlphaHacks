@@ -1,8 +1,19 @@
 from fastapi import FastAPI, File, UploadFile
 from typing import List
 
+<<<<<<< HEAD
 from starlette.responses import HTMLResponse
 
+=======
+import json
+import requests
+
+#Get Brand embedding data and query
+BRAND_EMB_DIR = 'C:\Sridhar\AlphaHacks\AlphHacks\AlphaHacks\brand_embeddings'
+
+
+#Test Data
+>>>>>>> 2646757589006782700c8102bf232a290eebb214
 foodType = [
     {
         "name": "Drinks",
@@ -17,6 +28,8 @@ foodType = [
         "brands": ["apple", "banana", "peach"]
     },
 ]
+
+#Test stats
 companyStats = [
     {
         "name": "Coke",
