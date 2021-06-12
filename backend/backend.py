@@ -1,19 +1,20 @@
 from fastapi import FastAPI, File, UploadFile
 from typing import List
 
-<<<<<<< HEAD
 from starlette.responses import HTMLResponse
 
-=======
+import os
 import json
 import requests
 
+import brand_query
+
 #Get Brand embedding data and query
-BRAND_EMB_DIR = 'C:\Sridhar\AlphaHacks\AlphHacks\AlphaHacks\brand_embeddings'
+BRAND_EMB_DIR = r"C:/Sridhar/AlphaHacks/AlphHacks/AlphaHacks/brand_embeddings/embeddings.json"
+assert os.path.isfile(BRAND_EMB_DIR)
 
 
 #Test Data
->>>>>>> 2646757589006782700c8102bf232a290eebb214
 foodType = [
     {
         "name": "Drinks",
@@ -86,6 +87,10 @@ def getStats(company):
             return brand['articles']
     return {"error": "Companies for specific food does not exist"}
 
+def getSimilarBrands(brand_name):
+    brand_name = "Cavalier Chocolate"
+    similar_brands = brand_query.query(brand_name, kb_fpath= BRAND_EMB_DIR)
+    print(similar_brands)
 
 @app.post("/files/")
 def create_files(files: List[bytes] = File(...)):

@@ -2,6 +2,7 @@ import operator
 import codecs
 import os
 import json
+import numpy as np
 
 def load_embeddings(kb_fpath):
     with open(kb_fpath) as fp:
@@ -14,7 +15,7 @@ def query(target_brand_name, top_n=10, kb_fpath = None, dict_kb=None):
     #    target_brand_name = str(target_brand_name)
 
     if dict_kb is None:
-        load_embeddings(target_brand_name)
+        dict_kb = load_embeddings(kb_fpath)
 
     target_brand_emb = np.array(dict_kb[target_brand_name])
 
@@ -32,7 +33,7 @@ def query(target_brand_name, top_n=10, kb_fpath = None, dict_kb=None):
     if top_n:
         sorted_dict = sorted_dict[: top_n]
 
-    logger.debug("{}: {}".format(target_brand_name, sorted_dict))
+    #print("{}: {}".format(target_brand_name, sorted_dict))
 
     return sorted_dict
 
