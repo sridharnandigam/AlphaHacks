@@ -15,7 +15,7 @@ struct LoadingPage: View {
         ("newspaper","Fetching News Articles...")
     ]
     @State private var item = 0;
-    let timer = Timer.publish(every: 1.5, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
         VStack {
             ForEach(0..<loading_info.count) {info in

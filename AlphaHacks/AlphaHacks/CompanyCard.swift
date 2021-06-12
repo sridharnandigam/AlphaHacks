@@ -12,7 +12,6 @@ struct CompanyCard: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(appState.selectedCompany).font(.bold(.largeTitle)())
             Text("Sustainability Rating: " + String(appState.company_details.rating)).font(.subheadline)
             Divider()
             Text(appState.company_details.description).font(.caption).padding()
