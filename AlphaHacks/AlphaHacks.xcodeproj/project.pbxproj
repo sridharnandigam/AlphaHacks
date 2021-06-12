@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		780FF8E82675525200EA2B39 /* LoadingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780FF8E72675525200EA2B39 /* LoadingPage.swift */; };
+		780FF8EA26755C1700EA2B39 /* CompanyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780FF8E926755C1700EA2B39 /* CompanyCard.swift */; };
+		780FF8EC26755CC800EA2B39 /* ArticleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780FF8EB26755CC800EA2B39 /* ArticleCard.swift */; };
+		780FF8EE26755E3000EA2B39 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780FF8ED26755E3000EA2B39 /* ImageLoader.swift */; };
 		783566FB26745DF4008F9DA7 /* AlphaHacksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783566FA26745DF4008F9DA7 /* AlphaHacksApp.swift */; };
 		783566FD26745DF4008F9DA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783566FC26745DF4008F9DA7 /* ContentView.swift */; };
 		783566FF26745DF6008F9DA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783566FE26745DF6008F9DA7 /* Assets.xcassets */; };
@@ -18,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		780FF8E72675525200EA2B39 /* LoadingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPage.swift; sourceTree = "<group>"; };
+		780FF8E926755C1700EA2B39 /* CompanyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCard.swift; sourceTree = "<group>"; };
+		780FF8EB26755CC800EA2B39 /* ArticleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCard.swift; sourceTree = "<group>"; };
+		780FF8ED26755E3000EA2B39 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		783566F726745DF4008F9DA7 /* AlphaHacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlphaHacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		783566FA26745DF4008F9DA7 /* AlphaHacksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaHacksApp.swift; sourceTree = "<group>"; };
 		783566FC26745DF4008F9DA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +72,9 @@
 				78D4E62126751A6B00AC1E4E /* CameraBase.swift */,
 				78D4E6232675240200AC1E4E /* AppState.swift */,
 				780FF8E72675525200EA2B39 /* LoadingPage.swift */,
+				780FF8E926755C1700EA2B39 /* CompanyCard.swift */,
+				780FF8EB26755CC800EA2B39 /* ArticleCard.swift */,
+				780FF8ED26755E3000EA2B39 /* ImageLoader.swift */,
 			);
 			path = AlphaHacks;
 			sourceTree = "<group>";
@@ -150,7 +159,10 @@
 				78D4E62226751A6B00AC1E4E /* CameraBase.swift in Sources */,
 				783566FD26745DF4008F9DA7 /* ContentView.swift in Sources */,
 				780FF8E82675525200EA2B39 /* LoadingPage.swift in Sources */,
+				780FF8EA26755C1700EA2B39 /* CompanyCard.swift in Sources */,
 				78D4E6242675240200AC1E4E /* AppState.swift in Sources */,
+				780FF8EC26755CC800EA2B39 /* ArticleCard.swift in Sources */,
+				780FF8EE26755E3000EA2B39 /* ImageLoader.swift in Sources */,
 				783566FB26745DF4008F9DA7 /* AlphaHacksApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
