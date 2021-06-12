@@ -92,6 +92,8 @@ def getSimilarBrands(brand_name):
     similar_brands = brand_query.query(brand_name, kb_fpath= BRAND_EMB_DIR)
     print(similar_brands)
 
+    return json.dumps(dict(lst))
+
 @app.post("/files/")
 def create_files(files: List[bytes] = File(...)):
     return {"file_sizes": [len(file) for file in files]}
