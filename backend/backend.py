@@ -87,8 +87,8 @@ def getStats(company):
             return brand['articles']
     return {"error": "Companies for specific food does not exist"}
 
+@app.get('/alternatives/{brand_name}')
 def getSimilarBrands(brand_name):
-    brand_name = "Cavalier Chocolate"
     similar_brands = brand_query.query(brand_name, kb_fpath= BRAND_EMB_DIR)
     print(similar_brands)
 
