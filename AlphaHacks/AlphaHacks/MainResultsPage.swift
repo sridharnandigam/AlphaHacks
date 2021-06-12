@@ -12,7 +12,7 @@ struct MainResultsPage: View {
     
     var body: some View {
         VStack {
-            Text("These are companies identified on the receipt. Select one of them to see additional details about their practices and available alternatives.")
+            Text("These are companies identified on the receipt or product. Select one of them to see additional details about their practices and available alternatives.")
             List(appState.companies, id: \.hashValue) { name in
                 NavigationLink(
                     destination: CompanyDetailsView(company: "Test Company"),
