@@ -15,7 +15,32 @@ foodType = [
         "brands": ["apple", "banana", "peach"]
     },
 ]
-companyStats = []
+companyStats = [
+    {
+        "name": "Coke",
+        "rating": 434,
+        "articles": [
+            {
+                "article_title": "a title",
+                "description": "a desc",
+                "link": "https://whatever.wow",
+                "image_link": "https://hi.jpg"
+            },
+        ],
+    },
+    {
+        "name": "Oreos",
+        "rating": 4343,
+        "articles": [
+            {
+                "article_title": "another title",
+                "description": "another desc",
+                "link": "https://anotherwow.wow",
+                "image_link": "https://anotherhi.jpg"
+            },
+        ],
+    },
+]
 
 app = FastAPI()
 
@@ -30,8 +55,8 @@ def getCompetitors(name):
             return food['brands']
     return {"error": "Brands for specified food does not exist"}
 
-# @app.get('/stats/{company}')  WIP
-# def getStats(name):
-#     for food in foodType:
-#         if food['name'] == name:
-#             return food
+@app.get('/stats/{company}')
+def getStats(company):
+    for brand in companyStats:
+        if brand['name'] == company:
+            return brand['articles']
