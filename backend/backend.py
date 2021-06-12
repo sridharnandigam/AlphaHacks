@@ -1,6 +1,8 @@
-from fastapi import FastAPI
-from pydantic import BaseModel
+from fastapi import FastAPI, File, UploadFile
 from typing import List
+
+from starlette.responses import HTMLResponse
+
 foodType = [
     {
         "name": "Drinks",
@@ -46,7 +48,16 @@ app = FastAPI()
 
 @app.get("/")
 def root():
-    return {"message": "Welcome To Sustainabrands"}
+    content = """
+    <body>
+    <form action="/files/" enctype="multipart/form-data" method="post">
+    <input name="files" type="file" multiple>
+    <input type="submit">
+    </form>
+    </body>
+    """
+    return HTMLResponse(content=content)
+
 
 @app.get('/competitors/{name}')
 def getCompetitors(name):
@@ -60,3 +71,14 @@ def getStats(company):
     for brand in companyStats:
         if brand['name'] == company:
             return brand['articles']
+    return {"error": "Companies for specific food does not exist"}
+
+
+@app.post("/files/")
+def create_files(files: List[bytes] = File(...)):
+    return {"file_sizes": [len(file) for file in files]}
+
+
+@app.post("/uploadfiles/")
+async def create_upload_files(files: List[UploadFile] = File(...)):
+    return {"filenames": [file.filename for file in files]}
