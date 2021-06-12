@@ -14,8 +14,7 @@ def query(target_brand_name, top_n=10, kb_fpath = None, dict_kb=None):
     #    target_brand_name = str(target_brand_name)
 
     if dict_kb is None:
-        with codecs.open(kb_fpath, encoding='utf-8') as fp:
-            dict_kb = json.load(fp)
+        load_embeddings(target_brand_name)
 
     target_brand_emb = np.array(dict_kb[target_brand_name])
 
