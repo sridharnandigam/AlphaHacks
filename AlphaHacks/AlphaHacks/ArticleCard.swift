@@ -17,7 +17,9 @@ struct ArticleCard: View {
                 Text(article.article_title).font(.title2)
                 Text(article.description).font(.caption)
             }
-        }.frame(height: 100)
+        }.frame(height: 100).onTapGesture {
+            UIApplication.shared.open(URL(string: article.link)!)
+        }
     }
 }
 
