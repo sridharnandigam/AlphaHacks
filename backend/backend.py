@@ -1,6 +1,15 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List
+
+import json
+import requests
+
+#Get Brand embedding data and query
+BRAND_EMB_DIR = 'C:\Sridhar\AlphaHacks\AlphHacks\AlphaHacks\brand_embeddings'
+
+
+#Test Data
 foodType = [
     {
         "name": "Drinks",
@@ -15,6 +24,8 @@ foodType = [
         "brands": ["apple", "banana", "peach"]
     },
 ]
+
+#Test stats
 companyStats = [
     {
         "name": "Coke",
