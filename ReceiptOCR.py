@@ -2,8 +2,8 @@ import cv2
 import pytesseract
 from PIL import Image
 
-
 filename = input("enter filename: ")
+
 img=cv2.imread(filename)
 gray=cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
   
@@ -14,4 +14,5 @@ if "pre_processor"=="blur":
       
 cv2.imwrite("temp.png", gray)
 text = pytesseract.image_to_string(Image.open("temp.png"))
+text = text.replace("ELLOGG'S", "KELLOGG'S")
 print(text)
