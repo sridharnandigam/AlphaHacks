@@ -12,11 +12,12 @@ collection = db.data
 
 docs = list(collection.find())
 
-#print(docs[:2])
-keys = reduce( lambda all_keys, rec_keys: all_keys | set(rec_keys), map(lambda d: d.keys(), collection.find()), set())
+def get_dict():
+    keys = reduce( lambda all_keys, rec_keys: all_keys | set(rec_keys), map(lambda d: d.keys(), collection.find()), set())
 
-print(keys)
-print(len(keys))
+    temp_dict = {}
+    for key in keys:
+        print("Load data for key: {}".format(key))
+        temp_dict[key] = collection.distinct(key)
 
-test_key = "Westland Milk Products"
-print(collection.distinct(test_key))
+    print("Loaded in {} rows\n".format(len(temp_dict.keys())))
