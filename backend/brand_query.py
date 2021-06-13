@@ -36,9 +36,3 @@ def query(target_brand_name, top_n=10, kb_fpath = None, dict_kb=None):
     #print("{}: {}".format(target_brand_name, sorted_dict))
 
     return sorted_dict
-
-if __name__ == "__main__":
-    BRAND_EMB_DIR = r"C:/Sridhar/AlphaHacks/AlphHacks/AlphaHacks/brand_embeddings/embeddings.json"
-    assert os.path.isfile(BRAND_EMB_DIR)
-    data_dict = load_embeddings(BRAND_EMB_DIR)
-    print({k: data_dict[k] for k in list(data_dict)[:100]})

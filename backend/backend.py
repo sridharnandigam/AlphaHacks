@@ -4,13 +4,16 @@ from typing import List
 from starlette.responses import HTMLResponse
 
 import os
+from dotenv import load_dotenv
+
 import json
 import requests
 
 import brand_query
 
+load_dotenv
 #Get Brand embedding data and query
-BRAND_EMB_DIR = r"C:/Sridhar/AlphaHacks/AlphHacks/AlphaHacks/brand_embeddings/embeddings.json"
+BRAND_EMB_DIR = os.environ.get("EMBEDDING_PATH")
 assert os.path.isfile(BRAND_EMB_DIR)
 
 
