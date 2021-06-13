@@ -13,6 +13,7 @@
 		780FF8EE26755E3000EA2B39 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780FF8ED26755E3000EA2B39 /* ImageLoader.swift */; };
 		780FF8F0267575CA00EA2B39 /* MainResultsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780FF8EF267575CA00EA2B39 /* MainResultsPage.swift */; };
 		780FF8F22675779600EA2B39 /* CompanyDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780FF8F12675779600EA2B39 /* CompanyDetailsView.swift */; };
+		780FF8F426757EDA00EA2B39 /* CompetitorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780FF8F326757EDA00EA2B39 /* CompetitorList.swift */; };
 		783566FB26745DF4008F9DA7 /* AlphaHacksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783566FA26745DF4008F9DA7 /* AlphaHacksApp.swift */; };
 		783566FD26745DF4008F9DA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783566FC26745DF4008F9DA7 /* ContentView.swift */; };
 		783566FF26745DF6008F9DA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783566FE26745DF6008F9DA7 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		780FF8ED26755E3000EA2B39 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		780FF8EF267575CA00EA2B39 /* MainResultsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResultsPage.swift; sourceTree = "<group>"; };
 		780FF8F12675779600EA2B39 /* CompanyDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailsView.swift; sourceTree = "<group>"; };
+		780FF8F326757EDA00EA2B39 /* CompetitorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitorList.swift; sourceTree = "<group>"; };
 		783566F726745DF4008F9DA7 /* AlphaHacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlphaHacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		783566FA26745DF4008F9DA7 /* AlphaHacksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaHacksApp.swift; sourceTree = "<group>"; };
 		783566FC26745DF4008F9DA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				780FF8ED26755E3000EA2B39 /* ImageLoader.swift */,
 				780FF8EF267575CA00EA2B39 /* MainResultsPage.swift */,
 				780FF8F12675779600EA2B39 /* CompanyDetailsView.swift */,
+				780FF8F326757EDA00EA2B39 /* CompetitorList.swift */,
 			);
 			path = AlphaHacks;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				780FF8F22675779600EA2B39 /* CompanyDetailsView.swift in Sources */,
 				780FF8E82675525200EA2B39 /* LoadingPage.swift in Sources */,
 				780FF8EA26755C1700EA2B39 /* CompanyCard.swift in Sources */,
+				780FF8F426757EDA00EA2B39 /* CompetitorList.swift in Sources */,
 				78D4E6242675240200AC1E4E /* AppState.swift in Sources */,
 				780FF8EC26755CC800EA2B39 /* ArticleCard.swift in Sources */,
 				780FF8EE26755E3000EA2B39 /* ImageLoader.swift in Sources */,
