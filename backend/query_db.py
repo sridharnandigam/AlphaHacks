@@ -17,3 +17,6 @@ keys = reduce( lambda all_keys, rec_keys: all_keys | set(rec_keys), map(lambda d
 
 print(keys)
 print(len(keys))
+
+test_key = "Westland Milk Products"
+print(collection.distinct(test_key))
