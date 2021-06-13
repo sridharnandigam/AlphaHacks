@@ -7,13 +7,14 @@ import numpy as np
 from dotenv import load_dotenv
 
 load_dotenv()
+BRAND_EMB_DIR = os.environ.get("EMBEDDING_PATH")
 
 def load_embeddings(kb_fpath):
     with open(kb_fpath) as fp:
         temp_dict = json.load(fp)
     return temp_dict
 
-def query(target_brand_name, top_n=10, kb_fpath = None, dict_kb=None):
+def query(target_brand_name, top_n=10, kb_fpath = BRAND_EMB_DIR, dict_kb=None):
 
     #if type(target_brand_name) == str:
     #    target_brand_name = str(target_brand_name)
