@@ -8,10 +8,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 BRAND_EMB_DIR = os.environ.get("EMBEDDING_PATH")
+other_key = "CJ Group"
 
-def load_embeddings(kb_fpath):
+def load_embeddings(kb_fpath = BRAND_EMB_DIR):
     with open(kb_fpath) as fp:
         temp_dict = json.load(fp)
+    print(len(temp_dict[other_key]))
     return temp_dict
 
 def query(target_brand_name, top_n=10, kb_fpath = BRAND_EMB_DIR, dict_kb=None):
@@ -30,6 +32,7 @@ def query(target_brand_name, top_n=10, kb_fpath = BRAND_EMB_DIR, dict_kb=None):
         if candidate_brand_name.encode("ascii", "ignore").decode() == target_brand_name.encode("ascii", "ignore").decode():
             continue
 
+        
         emb_dist = np.linalg.norm(target_brand_emb - np.array(candidate_emb))
         dict_brand_name_emb_distance[candidate_brand_name] = emb_dist
 
@@ -41,3 +44,5 @@ def query(target_brand_name, top_n=10, kb_fpath = BRAND_EMB_DIR, dict_kb=None):
     #print("{}: {}".format(target_brand_name, sorted_dict))
 
     return sorted_dict
+
+load_embeddings()
