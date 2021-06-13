@@ -4,7 +4,9 @@ from dotenv import load_dotenv
 import json
 import pymongo
 
-BRAND_EMB_DIR = r"C:/Sridhar/AlphaHacks/AlphHacks/AlphaHacks/brand_embeddings/embeddings.json"
+load_dotenv()
+
+BRAND_EMB_DIR = os.environ.get("EMBEDDING_PATH")
 
 client = pymongo.MongoClient('localhost', 27017)
 

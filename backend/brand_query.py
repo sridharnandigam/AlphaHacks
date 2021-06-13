@@ -4,6 +4,10 @@ import os
 import json
 import numpy as np
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 def load_embeddings(kb_fpath):
     with open(kb_fpath) as fp:
         temp_dict = json.load(fp)
