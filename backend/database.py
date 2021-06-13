@@ -14,7 +14,7 @@ database = client.branddb
 collection = database.get_collection("data")
 
 async def retrieve_brand(id: str) -> dict:
-    brand = await collection.find_one({"_id": ObjectId(id)})
+    #brand = await collection.find_one({"_id": ObjectId(id)})
 
     similar_brands = brand_query.query(brand_name, kb_fpath= BRAND_EMB_DIR)
     print(similar_brands)
